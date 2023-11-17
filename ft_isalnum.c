@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nandreev <nandreev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/17 16:03:31 by nandreev          #+#    #+#             */
-/*   Updated: 2023/11/17 17:44:32 by nandreev         ###   ########.fr       */
+/*   Created: 2023/11/17 17:27:46 by nandreev          #+#    #+#             */
+/*   Updated: 2023/11/17 17:37:58 by nandreev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int a)
+int	ft_isalpha(int a)
 {
-    if (a >= '0' && a <= '9')
+    if ((a >= 'a' && a <= 'z') || 
+        (a >= 'A' && a <= 'Z') || 
+        (a >= '0' && a <= '9'))
     {
-        return (a);
+        return (1);
     }
     else
         return (0);
 }
-
-/*#include <stdio.h>
-
-int    main()
-{
-    printf("ft_isdigit('7')=%d\n", ft_isdigit('7'));
-    printf("ft_isdigit('-')=%d\n", ft_isdigit('-'));
-}*/
