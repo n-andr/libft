@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nandreev <nandreev@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nandreev <nandreev@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/17 17:44:02 by nandreev          #+#    #+#             */
-/*   Updated: 2023/11/17 18:14:42 by nandreev         ###   ########.fr       */
+/*   Created: 2023/10/17 17:37:12 by nandreev          #+#    #+#             */
+/*   Updated: 2023/10/17 17:38:08 by nandreev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int a)
+int	ft_strlen(char *str)
 {
-    if (a >= 0 && a <= 127)
-    {
-        return (1);
-    }
-    else
-        return (0);
+	int	length;
+
+	length = 0;
+	while (*str != '\0')
+	{
+		str ++;
+		length ++;
+	}
+	return (length);
 }
+
 /*#include <stdio.h>
 
-int    main()
+int main(void)
 {
-    printf("ft_isascii('7')=%d\n", ft_isascii('7'));
-    printf("ft_isascii('128')=%d\n", ft_isascii('128'));
+    char str[] = "Hi";
+
+    printf("Length of the string: %d\n",ft_strlen(str));
 }*/

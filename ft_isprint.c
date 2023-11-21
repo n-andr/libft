@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nandreev <nandreev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/17 16:03:24 by nandreev          #+#    #+#             */
-/*   Updated: 2023/11/17 17:40:13 by nandreev         ###   ########.fr       */
+/*   Created: 2023/11/17 17:44:02 by nandreev          #+#    #+#             */
+/*   Updated: 2023/11/20 17:17:42 by nandreev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
 
-int	ft_isalpha(int a);
-int	ft_isdigit(int a);
-int	ft_isalpha(int a);
-int	ft_isascii(int a);
-int	ft_strlen(char *str);
-void *ft_memset(void *ptr, int value, size_t num);
-void ft_bzero(void *s, size_t n);
+#include "libft.h"
+
+int ft_isprint(int a)
+{
+	if (a >= 32 && a <= 126)
+	{
+		return (1);
+	}
+	else
+		return (0);
+}
+/*#include <stdio.h>
+int main(void)
+{
+    printf ("result of %s is %d\n", "a", ft_isprint('a'));
+    printf ("result of %s is %d\n", "\n", ft_isprint('\n'));
+    return(0);
+}*/
