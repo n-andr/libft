@@ -3,16 +3,16 @@
 
 void *ft_memset(void *ptr, int value, size_t num)
 {
-    unsigned char *byte_ptr;
+    char    *new;
 
-    byte_ptr = (unsigned char *)ptr;
+    new = (char *)ptr;
     size_t i = 0;
     while (i < num) 
     {
-        byte_ptr[i] = (unsigned char)value;
+        new[i] = value;
         i++;
     }
-    return ptr;
+    return (new);
 }
 /*#include <stdio.h>
 
