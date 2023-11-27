@@ -17,7 +17,7 @@ char    *ft_strrchr (const char *s, int c)
     return(0);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 #include <string.h>
 
 int main ()
@@ -31,4 +31,4 @@ int main ()
   printf ("original strrchr:\n %s\n",strrchr(str,'w'));
   printf ("my ft_strrchr:\n %s\n",ft_strrchr(str,'w'));
   return 0;
-}
+}*/

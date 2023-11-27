@@ -14,7 +14,7 @@ char    *ft_strchr (const char *s, int c)
     return(0);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 #include <string.h>
 
 int main ()
@@ -28,4 +28,4 @@ int main ()
   printf ("original strchr %s\n",strchr(str,'w'));
   printf ("my ft_strchr %s\n",ft_strchr(str,'w'));
   return 0;
-}
+}*/
