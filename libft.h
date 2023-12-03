@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include <stddef.h>
+#include <stdlib.h>
 
 int	ft_isalpha(int a);
 int	ft_isdigit(int a);
@@ -30,3 +31,4 @@ void    *ft_memchr(const void *str, int c, size_t n);
 int ft_memcmp(const void *s1, const void *s2, size_t n);
 char    *ft_strnstr(const char *big, const char *little, size_t len);
 int	ft_atoi(const char *str);
+void *ft_calloc(size_t n_items, size_t size);

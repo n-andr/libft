@@ -41,7 +41,7 @@ int		main(void)
 	char	*src;
 	int		size;
 
-	src = "ceci et un test tu voissss";
+	src = "asdfghjkl";
 	size = 10;
 	printf("%zu\n", ft_strlcpy(dest, src, size));
 	printf(".%s.\n\n", dest);
