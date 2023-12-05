@@ -5,13 +5,13 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     char    *sub_s;
 
     sub_s = malloc((len+1) * sizeof(char));
-    if (len == 0 || sub_s == 0)
+    if (sub_s == 0)
         return (NULL);
     ft_strlcpy(sub_s, s + start, len + 1);
     return(sub_s);
 }
 
-#include <stdlib.h>
+/*#include <stdlib.h>
 #include<stdio.h>
 
 int main(void)
@@ -22,4 +22,4 @@ int main(void)
     if (s2[4] == '\0')
         printf("\nyes\n");
     free(s2);
-}
+}*/

@@ -1,6 +1,4 @@
 #include "libft.h"
-#include <string.h>
-
 
 char    *ft_strdup(const char *str1)
 {
@@ -9,14 +7,13 @@ char    *ft_strdup(const char *str1)
 
     len = ft_strlen((char *)str1);
     str2 = malloc((len+1) * sizeof(char));
-    if (len == 0 || str2 == 0)
+    if (str2 == 0)
         return (NULL);
     ft_strlcpy(str2, str1, len+1);
     return (str2);
-
 }
 
-#include <stdlib.h>
+/*#include <stdlib.h>
 #include<stdio.h>
 
  
@@ -26,4 +23,4 @@ int main(void)
     char *s2 = ft_strdup(s1);
     printf("%s", s2);
     free(s2);
-}
+}*/

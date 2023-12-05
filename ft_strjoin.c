@@ -15,7 +15,7 @@ char *ft_strjoin(char const *s1, char const *s2)
     return (s_join);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main() {
     const char *str1 = "Hello";
@@ -29,4 +29,4 @@ int main() {
         printf("Memory allocation failed\n");
     }
     return 0;
-}
+}*/
