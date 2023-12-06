@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nandreev <nandreev@student.42.fr>          +#+  +:+       +#+         #
+#    By: nandreev <nandreev@student.42berlin.de     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/17 16:02:49 by nandreev          #+#    #+#              #
-#    Updated: 2023/11/29 17:49:58 by nandreev         ###   ########.fr        #
+#    Updated: 2023/12/06 15:50:36 by nandreev         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 

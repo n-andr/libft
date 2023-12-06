@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nandreev <nandreev@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nandreev <nandreev@student.42berlin.de     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 16:03:24 by nandreev          #+#    #+#             */
-/*   Updated: 2023/11/17 17:40:13 by nandreev         ###   ########.fr       */
+/*   Updated: 2023/12/06 15:50:36 by nandreev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
+
 #include <stdlib.h>
 
 int	ft_isalpha(int a);
