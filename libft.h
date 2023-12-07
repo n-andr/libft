@@ -6,7 +6,7 @@
 /*   By: nandreev <nandreev@student.42berlin.de     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 16:03:24 by nandreev          #+#    #+#             */
-/*   Updated: 2023/12/06 17:36:12 by nandreev         ###   ########.fr       */
+/*   Updated: 2023/12/07 17:30:37 by nandreev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,4 @@ char	*ft_strdup(const char *str1);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
+char    *ft_itoa(int n);
