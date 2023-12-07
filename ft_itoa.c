@@ -66,7 +66,7 @@ char    *ft_itoa(int n)
     return (result);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main() {
     int num = -1230;
@@ -106,4 +106,4 @@ int main() {
 
 
     return 0;
-}
+}*/
