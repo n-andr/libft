@@ -14,6 +14,32 @@
 
 #include <stdio.h>
 
+static char** split_words(char *result[], char const *s, char c, int words) 
+{
+    int i;
+    unsigned int    len;
+    unsigned int    start;
+
+    i = 0;
+    len = 0;
+    start = 0;
+    while (i < words-1)
+    {
+        if (*(s + start) == c || *(s + start) == '\0')
+        {
+            result[i] = ft_substr(s, start - len, len);
+            len = 0;
+            i ++;
+        }
+        else
+            len ++;
+        if (*(s+start) == '\0')
+            break;
+        start ++;
+    }
+    result[i] = NULL;
+    return(result);
+}
 
 char **ft_split(char const *s, char c)
 {
@@ -22,51 +48,37 @@ char **ft_split(char const *s, char c)
     char    *sdub;
 
     i = 0;
+    sdub = (char*)s;
     while (*sdub != '\0')
     {
         if (*sdub == c)
             i++;
         sdub++;
     }
-
-    if (i == 0)
-    {
-        result = malloc(2 * sizeof(char *));
-        if (result == 0)
-            return (NULL);
-        result[0] = ft_strdup(s);
-        result[1] = NULL;
-        return(result);
-    }
-
-    
-
+    result = malloc((i+2) * sizeof(char *));
+    if (result == 0)
+        return (NULL);
+    split_words(result, s, c, i+2);
+    return(result);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main() {
-    char const *input_string = "Hello,World,Split,Me";
-    char delimiter = '-';
+    char const *input_string = "split me pls ";
+    char delimiter = ' ';
 
     printf("Original String: %s\n", input_string);
     printf("Delimiter: %c\n", delimiter);
 
-    // Testing your ft_split function
     char **result = ft_split(input_string, delimiter);
 
     if (result) {
         printf("\nSplit Result:\n");
-        while (*result) {
-            printf("%s\n", *result);
-            result++;
-        }
-
-        // Free the allocated memory
-        char **temp = result;
-        while (*temp) {
-            if (temp != NULL)
-                free(*temp);
+        char **temp = result; // Fix: Create a temporary pointer
+        while (*temp)
+        {
+            printf("%s\n", *temp);
             temp++;
         }
         free(result);
@@ -75,4 +87,4 @@ int main() {
     }
 
     return 0;
-}
+}*/
