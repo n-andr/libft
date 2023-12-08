@@ -11,20 +11,37 @@
 # **************************************************************************** #
 
 NAME = libft.a
+
+CC = gcc
+
 CFLAGS = -Wall -Wextra -Werror
-SOURCES = ft_isalpha.c ft_isdigit.c
+
+SOURCES = $(addprefix ft_, $(addsuffix .c, \
+		isalpha isdigit isalnum \
+		isascii isprint atoi \
+		bzero calloc itoa \
+		memchr memcmp memcpy \
+		memmove memset \
+		putchar_fd putendl_fd putnbr_fd \
+		putstr_fd split strchr \
+		strdup striteri strjoin \
+		strlcat strlcpy strlen \
+		strmapi strncmp strnstr \
+		strrchr strtrim substr \
+		tolower toupper))
+
+OBJS := $(SOURCES:%.c=%.o)
 
 all: $(NAME)
 
-$(NAME): $(SOURCES)
-	cc $(CFLAGS) -c $(SOURCES)
-	ar -rc $(NAME) *.o
+$(NAME): $(OBJS)
+	ar rc $(NAME) $(OBJS)
 
 clean:
-	rm -f $(NAME)
+	rm -rf $(OBJS)
 	rm -f *.o
 
 fclean: clean
-	rm -f $(NAME)
+	rm -Rf $(NAME)
 
 re: fclean all 
