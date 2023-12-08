@@ -14,18 +14,18 @@
 
 int	ft_isdigit(int a)
 {
-    if (a >= '0' && a <= '9')
-    {
-        return (a);
-    }
-    else
-        return (0);
+	if (a >= '0' && a <= '9')
+	{
+		return (a);
+	}
+	else
+		return (0);
 }
 
 /*#include <stdio.h>
 
 int    main()
 {
-    printf("ft_isdigit('7')=%d\n", ft_isdigit('7'));
-    printf("ft_isdigit('-')=%d\n", ft_isdigit('-'));
+	printf("ft_isdigit('7')=%d\n", ft_isdigit('7'));
+	printf("ft_isdigit('-')=%d\n", ft_isdigit('-'));
 }*/

@@ -23,18 +23,18 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	srcc = (char *)src;
 	dstc = (char *)dst;
 	if (srcc < dstc)
-    {
+	{
 		while (len--)
 			*(dstc + len) = *(srcc + len);
-    }
+	}
 	else
-    {
+	{
 		while (i < len)
-        {
+		{
 			*(dstc + i) = *(srcc + i);
-            i++;
-        }
-    }
+			i++;
+		}
+	}
 	return (dst);
 }
 
@@ -42,14 +42,14 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 int main()
 {
-    char source[] = "Hello, World!";
-    char destination[20];
+	char source[] = "Hello, World!";
+	char destination[20];
 
-    // Using ft_memmove to move from source to destination
-    ft_memmove(destination, source, 5);
+	// Using ft_memmove to move from source to destination
+	ft_memmove(destination, source, 5);
 
-    // Print the content of the destination array
-    printf("Moved String: %s\n", destination);
+	// Print the content of the destination array
+	printf("Moved String: %s\n", destination);
 
-    return 0;
+	return 0;
 }*/

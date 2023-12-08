@@ -31,19 +31,19 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 int main(void)
 {
-    char destination[20] = "Hello, ";
-    const char source[] = "World!";
-    size_t result;
+	char destination[20] = "Hello, ";
+	const char source[] = "World!";
+	size_t result;
 
-    // Print the initial content of the destination array
-    printf("Before ft_strlcat: %s\n", destination);
+	// Print the initial content of the destination array
+	printf("Before ft_strlcat: %s\n", destination);
 
-    // Call ft_strlcat to concatenate the source string to the destination
-    result = ft_strlcat(destination, source, sizeof(destination));
+	// Call ft_strlcat to concatenate the source string to the destination
+	result = ft_strlcat(destination, source, sizeof(destination));
 
-    // Print the result and the modified content of the destination array
-    printf("Result: %zu\n", result);
-    printf("After ft_strlcat: %s\n", destination);
+	// Print the result and the modified content of the destination array
+	printf("Result: %zu\n", result);
+	printf("After ft_strlcat: %s\n", destination);
 
-    return 0;
+	return 0;
 }*/

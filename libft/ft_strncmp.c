@@ -27,10 +27,10 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 /*#include <stdio.h>
 #include <string.h>
 int main() {
-    char str1[] = "2";
-    char str2[] = "1";
+	char str1[] = "2";
+	char str2[] = "1";
 
-    printf("%d\n", ft_strncmp(str1, str2, 1));
-    printf("%d\n", strncmp(str1, str2, 1));
-    return 0;
+	printf("%d\n", ft_strncmp(str1, str2, 1));
+	printf("%d\n", strncmp(str1, str2, 1));
+	return 0;
 }*/

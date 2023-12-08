@@ -36,11 +36,11 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-#include <stdlib.h>
+
 /*#include <stdio.h>
 int main()
 {
-    char str[] = "--123456yhjnjbhvg";
-    printf("original: %d\n", atoi(str));
-    printf("my_ft:%d\n", ft_atoi(str));
+	char str[] = "--123456yhjnjbhvg";
+	printf("original: %d\n", atoi(str));
+	printf("my_ft:%d\n", ft_atoi(str));
 }*/

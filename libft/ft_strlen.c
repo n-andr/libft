@@ -29,7 +29,7 @@ int	ft_strlen(char *str)
 
 int main(void)
 {
-    char str[] = "Hi";
+	char str[] = "Hi";
 
-    printf("Length of the string: %d\n",ft_strlen(str));
+	printf("Length of the string: %d\n",ft_strlen(str));
 }*/

@@ -1,38 +1,50 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nandreev <nandreev@student.42berlin.de     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/06 15:49:39 by nandreev          #+#    #+#             */
+/*   Updated: 2023/12/08 21:22:36 by nandreev         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    int i;
-    int len;
-    char *s2;
+	int		i;
+	int		len;
+	char	*s2;
 
-    i = 0;
-    len = ft_strlen((char*)s);
-    s2 = malloc (sizeof(char) * (len + 1));
-    if (s2 == 0)
-        return (NULL);
-    while (s[i] != '\0')
-    {
-        s2[i] = f(i, s[i]);
-        i++;
-    }
-    s2[i] = '\0';
-    return(s2);
+	i = 0;
+	len = ft_strlen((char *)s);
+	s2 = malloc (sizeof(char) * (len + 1));
+	if (s2 == 0)
+		return (NULL);
+	while (s[i] != '\0')
+	{
+		s2[i] = f(i, s[i]);
+		i++;
+	}
+	s2[i] = '\0';
+	return (s2);
 }
 
 /*#include <stdio.h>
 
 char capitalise(unsigned int i, char c)
 {
-    return (c = c + 'A' - 'a');
+	return (c = c + 'A' - 'a');
 }
 
 int main(void)
 {
-    char str[] = "qwerty";
-    char *s2;
+	char str[] = "qwerty";
+	char *s2;
 
-    s2 = ft_strmapi(str, capitalise);
-    printf("%s\n",str);
-    printf("%s\n",s2);
+	s2 = ft_strmapi(str, capitalise);
+	printf("%s\n",str);
+	printf("%s\n",s2);
 }*/
