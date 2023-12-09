@@ -16,16 +16,18 @@ char	*ft_strrchr(const char *s, int c)
 {
 	char	*s1;
 	int		len;
+	char	ch;
 
 	s1 = (char *)s;
+	ch = (char)c;
 	len = ft_strlen(s1);
-	while (len != 0)
+	while (len >= 0)
 	{
-		if (*(s1 + len) == c)
+		if (*(s1 + len) == ch)
 			return (s1 + len);
 		len--;
 	}
-	return (0);
+	return (NULL);
 }
 
 /*#include <stdio.h>

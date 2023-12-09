@@ -15,15 +15,19 @@
 char	*ft_strchr(const char *s, int c)
 {
 	char	*s1;
+	char	ch;
 
+	ch = (char)c;
 	s1 = (char *)s;
 	while (*s1 != '\0')
 	{
-		if (*s1 == c)
+		if (*s1 == ch)
 			return (s1);
 		s1++;
 	}
-	return (0);
+	if (*s1 == ch)
+		return (s1);
+	return (NULL);
 }
 
 /*#include <stdio.h>
