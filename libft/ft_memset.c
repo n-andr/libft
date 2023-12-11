@@ -34,7 +34,6 @@ int main() {
 
 	// Using your custom memset function
 	ft_memset(buffer, 'A', 3);
-
 	// Print the contents of the buffer
 	printf("Buffer after ft_memset: %s\n", buffer);
 

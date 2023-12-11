@@ -51,7 +51,6 @@ int main()
 
 	// Using ft_memmove to move from source to destination
 	ft_memmove(destination, source, 5);
-
 	// Print the content of the destination array
 	printf("Moved String: %s\n", destination);
 

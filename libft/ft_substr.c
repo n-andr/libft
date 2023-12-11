@@ -35,6 +35,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 int main(void)
 {
 	const char *s1 = "String";
+	
 	char *s2 = ft_substr(s1, 1, 3);
 	printf("%s", s2);
 	if (s2[4] == '\0')

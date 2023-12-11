@@ -43,7 +43,6 @@ int main(void)
 {
 	char str[] = "qwerty";
 	char *s2;
-
 	s2 = ft_strmapi(str, capitalise);
 	printf("%s\n",str);
 	printf("%s\n",s2);

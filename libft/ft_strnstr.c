@@ -40,7 +40,6 @@ int main ()
 	int n;
 
 	n = 250000;
-
 	printf("original:%s\n",strnstr(largestring,	smallstring, n));
 	printf("my_ft:%s\n",ft_strnstr(largestring,	smallstring, n));
 
