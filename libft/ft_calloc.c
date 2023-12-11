@@ -19,8 +19,8 @@ void	*ft_calloc(size_t n_items, size_t size)
 	size_t	i;
 
 	total_size = n_items * size;
-	mem = malloc(total_size * sizeof(char));
-	if (mem == 0 || size == 0 || SIZE_MAX / n_items < size)
+	mem = malloc(total_size);
+	if (mem == 0 || SIZE_MAX / n_items < size)
 		return (NULL);
 	i = 0;
 	while (i < total_size)

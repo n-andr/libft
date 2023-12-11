@@ -14,58 +14,89 @@
 
 #include <stdio.h>
 
-static char	**split_words(char *result[], char const *s, char c, int words)
+int	count_words(char const *s, char c)
 {
-	int				i;
-	unsigned int	len;
-	unsigned int	start;
+	int	words;
 
-	i = 0;
-	len = 0;
-	start = 0;
-	while (i < words - 1)
+	words = 0;
+	while (*s != '\0')
 	{
-		if (*(s + start) == c || *(s + start) == '\0')
-		{
-			result[i] = ft_substr(s, start - len, len);
-			len = 0;
-			i ++;
-		}
-		else
-			len ++;
-		if (*(s + start) == '\0')
+		while (*s == c)
+			s++;
+		if (*s == '\0')
 			break ;
-		start ++;
+		while (*s != c && *s != '\0')
+			s++;
+		words++;
 	}
-	result[i] = NULL;
-	return (result);
+	return (words);
+}
+
+char	*find_next_word(char **s_pointer, char c)
+{
+	char	*start;
+	size_t	len;
+	char	*word;
+	char	*s;
+
+	s = *s_pointer;
+	while (*s == c)
+		s++;
+	start = (char *)s;
+	len = 0;
+	while (*s != c && *s != '\0')
+	{
+		len++;
+		s++;
+	}
+	word = (char *)malloc(len + 1);
+	if (word == 0)
+	{
+		return (NULL);
+	}
+	ft_strlcpy(word, start, len + 1);
+	*s_pointer = s;
+	return (word);
+}
+
+static void	split_words(char *result[], char const *s, char c, int words)
+{
+	int		current_word;
+	char	*word;
+	char	*sdub;
+
+	sdub = (char *)s;
+	current_word = 0;
+	while (current_word < words)
+	{
+		word = find_next_word(&sdub, c);
+		if (word == NULL)
+		{
+			result = NULL;
+			return ;
+		}
+		result[current_word] = word;
+		current_word++;
+	}
+	result[current_word] = NULL;
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
+	int		words;
 	char	**result;
-	char	*sdub;
 
-	i = 0;
-	sdub = (char *)s;
-	while (*sdub != '\0')
-	{
-		if (*sdub == c)
-			i++;
-		sdub++;
-	}
-	result = malloc((i + 2) * sizeof(char *));
+	words = count_words(s, c);
+	result = malloc((words + 1) * sizeof(char *));
 	if (result == 0)
 		return (NULL);
-	split_words(result, s, c, i + 2);
+	split_words(result, s, c, words);
 	return (result);
 }
-
 /*#include <stdio.h>
 
 int main() {
-	char const *input_string = "split me pls ";
+	char const *input_string = "split    me pls";
 	char delimiter = ' ';
 
 	printf("Original String: %s\n", input_string);
