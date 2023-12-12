@@ -14,7 +14,7 @@
 
 #include <stdio.h>
 
-int	count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int	words;
 
@@ -32,7 +32,7 @@ int	count_words(char const *s, char c)
 	return (words);
 }
 
-char	*find_next_word(char **s_pointer, char c)
+static char	*find_next_word(char **s_pointer, char c)
 {
 	char	*start;
 	size_t	len;
