@@ -17,18 +17,14 @@ void	*ft_calloc(size_t n_items, size_t size)
 {
 	size_t	total_size;
 	char	*mem;
-	size_t	i;
 
+	if (n_items != 0 && SIZE_MAX / n_items < size)
+		return (NULL);
 	total_size = n_items * size;
 	mem = malloc(total_size);
-	if (mem == 0 || SIZE_MAX / n_items < size)
+	if (mem == 0)
 		return (NULL);
-	i = 0;
-	while (i < total_size)
-	{
-		mem[i] = 0;
-		i++;
-	}
+	ft_bzero(mem, total_size);
 	return (mem);
 }
 
